@@ -1,0 +1,95 @@
+#MADE BY 120FPSPLAYER
+
+---------------------------------COMMANDS AND SCRIPT------------------------------
+#YOU CAN CHNAGE THE TIME
+#YOU CAN CHNAGE THE PERMISSION
+
+on place of tnt: 
+    set block at event-location to air 
+    spawn a primed tnt at event-location 
+    remove 1 tnt from player 
+    
+command /tnt:
+  permission: op
+  trigger:
+    give player 1 tnt named "&c&nɪɴꜱᴛᴀɴᴛ ᴛɴᴛ" with lore "&7" and "&c◆&7 Place down to Instantly Summon tnt", "&c◆&7 Explode your Enemies", "&7", "&9ʀᴀʀɪᴛʏ&7:&a &nᴄᴏᴍᴍᴏɴ"
+	
+	
+on right click with dark oak fence:  
+  push the player upwards at force 0.75
+  apply levitation to player for 3.5 seconds
+  remove 1 dark oak fence from player 
+  wait 3.5 seconds
+  remove levitation from player
+  
+on place of dark oak fence or lily pad:
+  cancel event
+	
+command /jetpack:
+  permission: op
+  trigger:
+    give player 1 dark oak fence named "&8&nᴊᴇᴛᴘᴀᴄᴋ" with lore "&7" and "&8◆&7 Right click to use this jetpack!", "&8◆&7 Escape near death situations!", "&7", "&9ʀᴀʀɪᴛʏ&7:&5 &nᴇᴘɪᴄ"
+	
+on right click with feather:  
+  apply speed 6 to player for 4 seconds
+  apply glowing 1 to player for 4 seconds
+  remove 1 feather from player 
+  wait 4 seconds
+  remove speed from player
+  remove glowing from player
+  
+on damage:  
+  if attacker is holding chain:
+    remove levitation from victim
+    push the victim downwards at force 0.3
+    remove 1 chain from attacker
+
+
+on right click:
+  if player is holding blaze rod:
+    shoot tnt from player with velocity 1.5
+    shoot tnt from player with velocity 1.1
+    shoot tnt from player with velocity 0.9
+    shoot tnt from player with velocity 0.7
+    remove 1 blaze rod from player 
+ 
+on right click:
+  if player is holding structure block:
+    loop 20 times:
+      shoot tnt from player with velocity 1.5
+      shoot tnt from player with velocity 1.1
+      shoot tnt from player with velocity 0.9
+      shoot tnt from player with velocity 0.7
+
+  
+on right click:
+  if player is holding lily pad:
+    apply absorption 2 to player for 10 seconds
+    apply regeneration 2 to player for 4 seconds
+    apply slowness 2 to player for 6 seconds
+    remove 1 lily pad from player 
+    apply glowing 2 to player for 6 seconds
+    wait 13 seconds
+    execute console command "effect clear %player% "
+	
+
+command /natureshield:
+  permission: op
+  trigger:
+    give player 1 lily pad named "&2&nɴᴀᴛᴜʀᴇ ꜱʜɪᴇʟᴅ" with lore "&7" and "&2◆&7 Gain Effects temporarily", "&2◆&7 4 Extra hearts, Regeneration 2, glowing", "&2◆&7 But also gain &8slowness.", "&7", "&9ʀᴀʀɪᴛʏ&7:&e &nʟᴇɢᴇɴᴅᴀʀʏ"
+	
+command /dynamite [<text>]:
+  permission: op
+  trigger:
+    loop 5 times:
+      give player blaze rod named "&6&nᴅʏɴᴀᴍɪᴛᴇ" with lore "&7" and "&6◆&7 Right click to use this dynamite", "&6◆&7 Summons lots of TNT that go forward!", "&6◆&7 It's TNT Cannon!", "&7", "&9ʀᴀʀɪᴛʏ&7:&5 &nᴇᴘɪᴄ"
+	
+command /chains:
+  permission: op
+  trigger:
+    give player 1 chain named "&8&nᴄʜᴀɪɴꜱ" with lore "&7" and "&8◆&7 Hit someone whos using a jetpack", "&8◆&7 To pull them down and disable their jetpack!", "&7", "&9ʀᴀʀɪᴛʏ&7:&9 &nʀᴀʀᴇ"
+	
+command /sonicFeather:
+  permission: op
+  trigger:
+    give player 1 feather named "&9&nꜱᴏɴɪᴄꜱ ꜰᴇᴀᴛʜᴇʀ" with lore "&7" and "&9◆&7 Right click to use the Sonics feather!", "&9◆&7 Escape near death situations!", "&9◆&7 Gain Enchaned Speed", "&7", "&9ʀᴀʀɪᴛʏ&7:&9 &nʀᴀʀᴇ"
