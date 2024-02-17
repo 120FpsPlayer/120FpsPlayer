@@ -1,0 +1,76 @@
+#TRASH CAN
+#BY 120FPSPLAYER
+
+Options:
+	GUI Title: &8[&cTrash Can&8]
+	Use Perm: trash.use
+	No Perm Message: &cYou can not use this command!
+
+command /trash:
+	permission: {@Use Perm}
+	permission message: {@No Perm Message}
+	trigger:
+		set {_gui} to a new chest inventory with 6 row with name "{@GUI Title}" 
+		set slot 0 of {_gui} to air
+		set slot 1 of {_gui} to air
+		set slot 2 of {_gui} to air
+		set slot 3 of {_gui} to air
+		set slot 4 of {_gui} to air
+		set slot 5 of {_gui} to air
+		set slot 6 of {_gui} to air
+		set slot 7 of {_gui} to air
+		set slot 8 of {_gui} to air
+		set slot 9 of {_gui} to air
+		set slot 10 of {_gui} to air
+		set slot 11 of {_gui} to air
+		set slot 12 of {_gui} to air
+		set slot 13 of {_gui} to air
+		set slot 14 of {_gui} to air
+		set slot 15 of {_gui} to air
+		set slot 16 of {_gui} to air
+		set slot 17 of {_gui} to air
+		set slot 18 of {_gui} to air
+		set slot 19 of {_gui} to air
+		set slot 20 of {_gui} to air
+		set slot 21 of {_gui} to air
+		set slot 22 of {_gui} to air
+		set slot 23 of {_gui} to air
+		set slot 24 of {_gui} to air
+		set slot 25 of {_gui} to air
+		set slot 26 of {_gui} to air
+		set slot 27 of {_gui} to air
+		set slot 28 of {_gui} to air
+		set slot 29 of {_gui} to air
+		set slot 30 of {_gui} to air
+		set slot 31 of {_gui} to air
+		set slot 32 of {_gui} to air
+		set slot 33 of {_gui} to air
+		set slot 34 of {_gui} to air
+		set slot 35 of {_gui} to air
+		set slot 36 of {_gui} to air
+		set slot 37 of {_gui} to air
+		set slot 38 of {_gui} to air
+		set slot 39 of {_gui} to air
+		set slot 40 of {_gui} to air
+		set slot 41 of {_gui} to air
+		set slot 42 of {_gui} to air
+		set slot 43 of {_gui} to air
+		set slot 44 of {_gui} to air
+		set slot 45 of {_gui} to air
+		set slot 46 of {_gui} to air
+		set slot 47 of {_gui} to air
+		set slot 48 of {_gui} to air
+		set slot 49 of {_gui} to air
+		set slot 50 of {_gui} to air
+		set slot 51 of {_gui} to air
+		set slot 52 of {_gui} to air
+		set slot 53 of {_gui} to orange stained glass pane named "&6Close Bin to Remove Items"
+		open {_gui} to player
+
+
+on inventory click:
+	if name of event-inventory is "{@GUI Title}":
+		if index of event-slot = 53:
+			cancel event
+			send "&6Removed Items" to player
+		
