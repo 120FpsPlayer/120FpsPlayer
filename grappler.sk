@@ -8,7 +8,7 @@ on fish:
 					set {grapple::falldamage::%player's uuid%} to true
 					push player upwards at speed 2                                                    #YOU CAN CHANGE THE UPWARDS SPEED OF PLAYER'S TOOL HERE 
 					push player forwards at speed 3                                                  #YOU CAN CHANGE THE FORWARDS SPEED OF PLAYER'S TOOL HERE
-					damage player's tool by 6,4                                                      #YOU CAN CHANGE THE DAMAGE OF PLAYER'S TOOL HERE 
+					damage player's tool by 10                                                      #YOU CAN CHANGE THE DAMAGE OF PLAYER'S TOOL HERE 
 					set {grapple::cooldown::%player's uuid%} to 5 seconds from now
 					wait 5 seconds
 					delete {grapple::cooldown::%player's uuid%}
@@ -32,6 +32,6 @@ command /grapplinghook:
 		give fishing rod of protection 1 named "&6Grappling Hook &8(&7Right-Click&8)" with lore "&8Grapple" with hidden enchants flag to player
 
 on damage:
-	if "%damage cause" is "fall":
+	if "%damage cause%" is "fall":
 		if {grapple::cooldown::%victim's uuid%} is set:
 			cancel event
