@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Information About Me
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-I’m **120FpsPlayer** and im currently learning to skript and i pretty muck like it. Right now i'm writing **easy**, **medium** and **advanced** scripts for free and it's just to copy and paste!
+I’m **120FpsPlayer** and im currently learning to skript and i pretty much like it. Right now i'm writing **easy**, **medium** and **advanced** scripts for free and it's just to copy and paste!
 If you want any special skript or something it's just to write to me! My "**reach me information**" is located under the text.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
