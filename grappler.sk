@@ -16,6 +16,7 @@ on fish:
 					delete {grapple::cooldown::%player's uuid%}
 					delete {grapple::falldamage::%player's uuid%}
 				else if {grapple::cooldown::%player's uuid%} is set:
+					cancel event
 					send "&cCooldown Time Remaining : &7(%difference between now and {grapple::cooldown::%player's uuid%}%)"
 					set {_item} to player's tool
 					set player's tool to air
