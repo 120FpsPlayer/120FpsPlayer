@@ -15,6 +15,7 @@ on fish:
 					wait 5 seconds
 					delete {grapple::cooldown::%player's uuid%}
 					delete {grapple::falldamage::%player's uuid%}
+                                        set cooldown of fishing rod of protection 1 named "&6Grappling Hook &8(&7Right Double-Click&8)" with lore "&8Grapple Yourself" with hidden enchants flag of player to 5 seconds  
 				else if {grapple::cooldown::%player's uuid%} is set:
 					cancel event
 					send "&cCooldown Time Remaining : &7(%difference between now and {grapple::cooldown::%player's uuid%}%)"
