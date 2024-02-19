@@ -6,6 +6,7 @@ on fish:
 			if lore of player's tool contains "&8Grapple Yourself":
 				if {grapple::cooldown::%player's uuid%} isn't set:
 					set {grapple::falldamage::%player's uuid%} to true
+					shoot fishing_hook from player with speed 10
 					push player upwards at speed 2                                                    #YOU CAN CHANGE THE UPWARDS SPEED OF PLAYER'S TOOL HERE 
 					push player forwards at speed 3                                                  #YOU CAN CHANGE THE FORWARDS SPEED OF PLAYER'S TOOL HERE
 					damage player's tool by 10                                                      #YOU CAN CHANGE THE DAMAGE OF PLAYER'S TOOL HERE 
