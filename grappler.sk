@@ -1,15 +1,16 @@
-#MADE BY : 120FPSPLAYER
+#made by 120FpsPlayer
 
 on fish:
 	if fishing state is reel in:
-		if unformatted name of player's tool is "Grappling Hook (Right-Click)":                    #YOU CAN CHANGE THE NAME
+		if unformatted name of player's tool is "Grappling Hook (Right Double-Click)":                    #YOU CAN CHANGE THE NAME
 			if lore of player's tool contains "&8Grapple Yourself":
 				if {grapple::cooldown::%player's uuid%} isn't set:
 					set {grapple::falldamage::%player's uuid%} to true
-					shoot fishing_hook from player with speed 10
-					push player upwards at speed 2                                                    #YOU CAN CHANGE THE UPWARDS SPEED OF PLAYER'S TOOL HERE 
+					cancel event
+					shoot fishing hook from player with speed 5000
+					push player upwards at speed 1                                                    #YOU CAN CHANGE THE UPWARDS SPEED OF PLAYER'S TOOL HERE 
 					push player forwards at speed 3                                                  #YOU CAN CHANGE THE FORWARDS SPEED OF PLAYER'S TOOL HERE
-					damage player's tool by 10                                                      #YOU CAN CHANGE THE DAMAGE OF PLAYER'S TOOL HERE 
+					damage player's tool by 18                                                    #YOU CAN CHANGE THE DAMAGE OF PLAYER'S TOOL HERE 
 					set {grapple::cooldown::%player's uuid%} to 5 seconds from now
 					wait 5 seconds
 					delete {grapple::cooldown::%player's uuid%}
@@ -21,7 +22,7 @@ on fish:
 					set player's tool to {_item}
 
 on swap hand item:
-	if unformatted name of player's tool is "Grappling Hook (Right-Click)":
+	if unformatted name of player's tool is "Grappling Hook (Right Double-Click)":
 		if lore of player's tool contains "&8Grapple Yourself":
 			cancel event
 			send "%nl%&cWarning! Using this item in your &c&loffhand &cwill bug out and use durability but not launch you.%nl%"
@@ -30,7 +31,7 @@ command /grapplinghook:
 	permission: grappler.staff                                                                  #PERMISSION , COPY AND PASTE IN LUCKPERMS FOR STAFF OR OTHERS
 	permission message: &cYou don't have access to this command
 	trigger:
-		give fishing rod of protection 1 named "&6Grappling Hook &8(&7Right-Click&8)" with lore "&8Grapple" with hidden enchants flag to player
+		give fishing rod of protection 1 named "&6Grappling Hook &8(&7Right Double-Click&8)" with lore "&8Grapple Yourself" with hidden enchants flag to player
 
 on damage:
 	if "%damage cause%" is "fall":
