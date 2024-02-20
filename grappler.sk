@@ -1,5 +1,9 @@
 #made by 120FpsPlayer
 
+on load:
+    delete {grapple::cooldown::*}
+    delete {grapple::falldamage::*}
+
 on fish:
 	if fishing state is reel in:
 		if unformatted name of player's tool is "Grappling Hook (Right Double-Click)":
